@@ -1,0 +1,63 @@
+name: EnderServer
+version: 1.0.0
+main: com.enderdevelopment.plugin.Main
+api-version: "1.21"
+description: A friendly server plugin with helpful commands.
+commands:
+  spawn:
+    description: Teleports the player to the server spawn point.
+    usage: /spawn
+  setspawn:
+    description: Sets the server spawn point to your location.
+    usage: /setspawn
+    permission: enderserver.setspawn
+  heal:
+    description: Heals the player to full health and hunger.
+    usage: /heal
+    permission: enderserver.heal
+  feed:
+    description: Restores the player's hunger.
+    usage: /feed
+    permission: enderserver.feed
+  god:
+    description: Toggles invulnerability for a player.
+    usage: /god [player]
+    permission: enderserver.god
+  fly:
+    description: Toggles flight for a player.
+    usage: /fly [player]
+    permission: enderserver.fly
+  sethome:
+    description: Sets a home at your current location.
+    usage: /sethome [name]
+  home:
+    description: Teleports to one of your homes.
+    usage: /home [name]
+  delhome:
+    description: Deletes one of your homes.
+    usage: /delhome [name]
+  homes:
+    description: Lists all your homes.
+    usage: /homes
+permissions:
+  enderserver.setspawn:
+    description: Allows setting the server spawn.
+    default: op
+  enderserver.heal:
+    description: Allows healing players.
+    default: op
+  enderserver.feed:
+    description: Allows feeding players.
+    default: op
+  enderserver.god:
+    description: Allows toggling god mode.
+    default: op
+  enderserver.fly:
+    description: Allows toggling flight.
+    default: op
+  enderserver.homes.5:
+    description: Allows setting up to 5 named homes.
+    default: op
+  enderserver.homes.unlimited:
+    description: Allows setting unlimited homes.
+    default: false
